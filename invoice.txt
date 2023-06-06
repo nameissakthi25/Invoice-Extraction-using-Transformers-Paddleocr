@@ -1,0 +1,5 @@
+deepset/roberta-base-squad2 - Working fine.but needs improvement(try modifying the questions)
+
+bert-large-uncased-whole-word-masking-finetuned-squad -Model size is large (giving poor response than roberta)
+
+deepset/roberta-large-squad2 - 

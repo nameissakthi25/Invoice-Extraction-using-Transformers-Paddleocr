@@ -1,0 +1,8 @@
+fastapi
+transformers
+paddlepaddle
+paddleocr
+pillow
+numpy
+uvicorn
+tensorflow
