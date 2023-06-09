@@ -5,6 +5,7 @@ from PIL import Image
 import os
 from pyngrok import ngrok
 import numpy as np
+from fastapi.middleware.cors import CORSMiddleware
 
 public_url = ngrok.connect(8000).public_url
 print(f"Public URL: {public_url}")
@@ -23,6 +24,21 @@ def extract_text_from_image(image_path):
         for line in res:
             text += line[1][0]
     return text
+
+# Enable CORS
+origins = [
+    # List of allowed origins (replace with your frontend URLs)
+    "http://localhost",
+    "http://localhost:8000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/extract-information")
 async def extract_information(image: UploadFile = File(...)):
