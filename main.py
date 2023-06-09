@@ -3,6 +3,7 @@ from transformers import pipeline
 from paddleocr import PaddleOCR, draw_ocr
 from PIL import Image
 import os
+from pyngrok import ngrok
 import numpy as np
 
 app = FastAPI()
@@ -60,3 +61,5 @@ async def extract_information(image: UploadFile = File(...)):
 @app.get("/answers", response_model=dict)
 async def get_answers():
     return {"answers": answers}
+public_url = ngrok.connect(8000).public_url
+print(f"Public URL: {public_url}")
