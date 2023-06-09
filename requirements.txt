@@ -5,4 +5,5 @@ paddleocr
 pillow
 numpy
 uvicorn
-tensorflow
+pytorch
+pyngrok
