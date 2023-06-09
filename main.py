@@ -28,7 +28,7 @@ def extract_text_from_image(image_path):
 # Enable CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow access from any origin
+    allow_origins=["http://13.232.236.147"],  # Allow access from any origin
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
