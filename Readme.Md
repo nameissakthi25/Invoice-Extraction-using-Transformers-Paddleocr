@@ -1,4 +1,4 @@
-# FastAPI OCR and Question Answering
+# Invoice_Extraction Using Paddle OCR and Transformers
 
 This FastAPI application combines Optical Character Recognition (OCR) and Question Answering (QA) to extract information from images containing text, such as invoices. The OCR part uses PaddleOCR, and the QA part uses the transformers library.
 
